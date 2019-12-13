@@ -6,7 +6,8 @@ public class Main {
 
         System.out.println("CYPHER-INATOR 2000");
         System.out.println("\t1. NIHLIST CYPHER");
-        System.out.println("\t2. CEASER CYPHER");
+        System.out.println("\t2. CAESER CYPHER");
+        System.out.println("\t2. RAIL FENCE CYPHER");
 
         System.out.println("Type in the number corresponding to the cypher");
         int index = scan.nextInt();

@@ -1,4 +1,7 @@
 import java.util.*;
+
+import javax.imageio.plugins.tiff.ExifGPSTagSet;
+
 import java.lang.*;
 public class Main {
     public static void main(String[] args){
@@ -60,7 +63,50 @@ public class Main {
     }
 /* #region Rail Fence Cipher */
     public static void railfenceEncode(){
-        
+        Scanner scan = new Scanner(System.in);
+        String input = scan.nextLine();
+        int rails = scan.nextInt();
+        char[][] ciphertext = new char[rails][(int)(input.length()/(rails-2))+1];
+        int[] edges = railfenceEdge(input, rails);
+        int edge1 = 0;
+        int edge2 = 0;
+        for(int i = 0; i < edges.length; i++){
+            if(i%2 == 0){
+                ciphertext[0][edge1] = input.charAt(i);
+                edge1++; 
+            }else{ 
+                ciphertext[0][edge2] = input.charAt(i);
+                edge2++;
+            }
+        } 
+        String bits = toBits(input, rails);
+        for(int i = 0; i < bits.length(); i++){
+            ciphertext[i] = SANAZ MIGHT BE FUN TO CUDDLE WITH TOO
+            I WANNA LOOK INTO OLIVIA EYES AND 
+        }
+
+    }
+    public static String toBits(String in, int rails){
+        int[] edges = railfenceEdge(in, rails);
+        String[] end = new String[(int)(in.length()-edges.length)/rails-2];
+        String comp = "";
+        int count = 0;
+        for(int i = 0; i < edges.length; i+=2){
+            if(i != edges.length){
+                end[count] = in.substring(edges[i]+1,edges[i+1]);
+            }else{
+                String temp = in.substring(edges[i]+1);
+                String fin = "";
+                for(int j = temp.length()-1; j >= 0; j--){
+                    fin+=temp.charAt(j);
+                }
+                end[count] = fin;
+            }
+        }
+        for(int i = 0 ; i < end.length; i++){
+            comp += end[i];
+        }
+        return comp;
     }
     public static int[] railfenceEdge(String in, int rails){
         int[] pos = new int[(int)in.length()/rails];
@@ -69,7 +115,7 @@ public class Main {
             pos[count] = in.charAt(i);
             count++;
         }
-        return pos[];
+        return pos;
     }
 /* #endregion */
 /* #region Caesar Cipher */

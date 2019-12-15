@@ -62,6 +62,15 @@ public class Main {
     public static void railfenceEncode(){
         
     }
+    public static int[] railfenceEdge(String in, int rails){
+        int[] pos = new int[(int)in.length()/rails];
+        int count = 0;
+        for(int i = 1; i < in.length(); i+=(count-1) * rails){
+            pos[count] = in.charAt(i);
+            count++;
+        }
+        return pos[];
+    }
 /* #endregion */
 /* #region Caesar Cipher */
     public static String caesarCipherEncode(int shift, String plainText){
@@ -215,10 +224,7 @@ public class Main {
         }
         return square;
     }
-
-    
  /* #endregion */
-
 /* #region XOR CYPHER */
     public static int[] stringToArray(String in) {
         int[] ret = new int[in.length()];

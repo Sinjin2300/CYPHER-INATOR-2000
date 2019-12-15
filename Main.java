@@ -58,6 +58,11 @@ public class Main {
         }
         
     }
+/* #region Rail Fence Cipher */
+    public static void railfenceEncode(){
+        
+    }
+/* #endregion */
 /* #region Caesar Cipher */
     public static String caesarCipherEncode(int shift, String plainText){
         plainText = plainText.toUpperCase();

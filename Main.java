@@ -81,8 +81,7 @@ public class Main {
         } 
         String bits = toBits(input, rails);
         for(int i = 0; i < bits.length(); i++){
-            ciphertext[i] = SANAZ MIGHT BE FUN TO CUDDLE WITH TOO
-            I WANNA LOOK INTO OLIVIA EYES AND 
+            
         }
 
     }
